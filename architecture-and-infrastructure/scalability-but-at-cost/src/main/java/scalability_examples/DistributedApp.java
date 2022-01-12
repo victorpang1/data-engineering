@@ -8,9 +8,8 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
 
 public class DistributedApp {
-
 	public static void main(String[] args) {
-    	int size = 100000000;
+    	int size = Util.SIZE;
     	List<Double> numbers = Util.randomNumbers(size);
     	
 		var spark = SparkSession.builder().appName("DistributedApp").config("spark.master", "local[*]").getOrCreate();
@@ -29,7 +28,5 @@ public class DistributedApp {
         System.out.printf("The computation took %d milliseconds\n", runTime);    
         
         new Scanner(System.in).nextLine();
-
 	}
-
 }

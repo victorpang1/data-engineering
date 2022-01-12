@@ -5,7 +5,7 @@ import java.util.*;
 public final class SingleThreadedAppStream {
 
     public static void main(String[] args) {
-    	int size = 100000000;
+    	int size = Util.SIZE;
     	List<Double> numbers = Util.randomNumbers(size);
 
     	long start = System.currentTimeMillis();  	

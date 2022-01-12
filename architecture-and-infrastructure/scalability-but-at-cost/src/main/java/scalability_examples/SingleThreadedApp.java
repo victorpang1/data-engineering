@@ -5,12 +5,11 @@ import java.util.*;
 public final class SingleThreadedApp {
 
     public static void main(String[] args) {
-
-    	int size = 100000000;
+    	int size = Util.SIZE;
     	List<Double> numbers = Util.randomNumbers(size);
 
     	long start = System.currentTimeMillis();
-    	int sum = 0;
+    	double sum = 0.0;
     	for(var number:numbers)
     		sum += number;
     	double average = sum / size;
@@ -19,7 +18,6 @@ public final class SingleThreadedApp {
         long end = System.currentTimeMillis();
         long runTime = end - start;
         
-        System.out.printf("The computation took %d milliseconds\n", runTime);
-        
+        System.out.printf("The computation took %d milliseconds\n", runTime);      
     }
 }
