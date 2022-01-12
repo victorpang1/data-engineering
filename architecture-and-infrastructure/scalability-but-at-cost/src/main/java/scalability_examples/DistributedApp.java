@@ -27,6 +27,6 @@ public class DistributedApp {
         long runTime = end - start;
         System.out.printf("The computation took %d milliseconds\n", runTime);    
         
-        new Scanner(System.in).nextLine();
+        new Scanner(System.in).next();
 	}
 }
