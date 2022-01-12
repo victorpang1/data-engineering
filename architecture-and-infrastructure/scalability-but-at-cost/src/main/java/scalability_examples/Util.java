@@ -3,7 +3,7 @@ package scalability_examples;
 import java.util.*;
 
 public class Util {
-	public final static int SIZE = 500000000;
+	public final static int SIZE = 10000000;
 
 	public static List<Double> randomNumbers(int size) {
 		Random rand = new Random(2022);
