@@ -29,9 +29,9 @@ public class LocalComputeRemoteData {
         // even larger file: s3a://uga-data-engineering/enwik8 95.4 MB 
         // even larger file: s3a://uga-data-engineering/enwik9 953.7 MB
         
-        //JavaRDD<String> rddFromFile  = sc.textFile("s3a://uga-data-engineering/enwik9");
+        JavaRDD<String> rddFromFile  = sc.textFile("s3a://uga-data-lake/enwik9");
         
-        JavaRDD<String> rddFromFile  = sc.textFile("C:\\Users\\hanisaf\\Downloads\\enwik9\\enwik9");
+        //JavaRDD<String> rddFromFile  = sc.textFile("C:\\Users\\hanisaf\\Downloads\\enwik9\\enwik9");
         long lines = rddFromFile.count();
         System.out.printf("The file has %d lines\n", lines);
         
